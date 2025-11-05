@@ -1,6 +1,19 @@
+# Dependencias principales
 unstructured[all]
 markdownify
 langchain
 pdfminer.six
 pytesseract
 pillow
+pypdf
+Pillow
+pdf2image
+tqdm 
+
+# OCR
+pytesseract
+
+# Recomendadas para compatibilidad y mejor extracción
+numpy
+opencv-python
+lxml
