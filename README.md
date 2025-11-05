@@ -115,11 +115,38 @@ El flujo opcional `.github/workflows/convert.yml` permite que **cada vez que sub
 
 Ejemplo de ejecución automática:
 
+---
+
+### ⚙️ `.github/workflows/convert.yml`
+
 ```yaml
+name: Convert PDFs to Markdown
+
 on:
   push:
     paths:
       - 'input_pdfs/*.pdf'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Run pipeline
+        run: python pdf_to_md_advanced.py
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add output_md/*.md
+          git commit -m "Auto: PDF converted to Markdown" || echo "No changes"
+          git push
+
 ```
 
 Esto te permite usar el repositorio como un **repositorio de conocimiento** que se mantiene actualizado sin ejecutar nada localmente.
