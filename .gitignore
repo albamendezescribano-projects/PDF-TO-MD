@@ -1,8 +1,34 @@
+# ─────────────────────────────
+# Python
 __pycache__/
-.env/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
 .venv/
 venv/
-output_md/
-input_pdfs/
+env/
+
+# ─────────────────────────────
+# IDEs y entornos
+.vscode/
+.idea/
+.DS_Store
+
+# ─────────────────────────────
+# Archivos temporales
 *.log
-*.DS_Store
+*.tmp
+*.bak
+
+# ─────────────────────────────
+# Salidas del proyecto
+input_pdfs/
+output_md/
+examples/
+
+# ─────────────────────────────
+# Archivos del sistema
+Thumbs.db
