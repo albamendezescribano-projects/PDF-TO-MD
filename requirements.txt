@@ -1,0 +1,6 @@
+unstructured[all]
+markdownify
+langchain
+pdfminer.six
+pytesseract
+pillow
