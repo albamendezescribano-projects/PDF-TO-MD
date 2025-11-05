@@ -1,0 +1,8 @@
+__pycache__/
+.env/
+.venv/
+venv/
+output_md/
+input_pdfs/
+*.log
+*.DS_Store
