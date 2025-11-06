@@ -2,7 +2,7 @@ import os
 import pytesseract
 from unstructured.partition.pdf import partition_pdf
 from markdownify import markdownify as md
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from datetime import datetime
 
 # 📁 Carpetas
